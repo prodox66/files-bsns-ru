@@ -1,5 +1,5 @@
 <?php
-// BZN-FILE-PURPOSE-20260913: templates/manifest.php — формирует публичное оглавление реально существующих PNG/JSON-шаблонов.
+// BZN-FILE-PURPOSE-20260913: templates/manifest.php — формирует публичное оглавление реально существующих PNG-шаблонов.
 declare(strict_types=1);
 
 // Function: all filesystem, response and format settings are declared in one replaceable boundary.
@@ -9,10 +9,7 @@ function templateManifestConfig(): array
     $metadataFileName = 'manifest.json';
     $manifestVersion = 1;
     $allowedMethods = ['GET', 'HEAD'];
-    $allowedFormats = [
-        '.bzn.json' => 'json',
-        '.png' => 'png',
-    ];
+    $allowedFormats = ['.png' => 'png'];
     $defaultRandomEnabled = false;
     $responseHeaders = [
         'Content-Type: application/json; charset=utf-8',
