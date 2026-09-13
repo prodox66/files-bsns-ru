@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "templates": [
+    {
+      "id": "ptsd-peptides",
+      "name": "ПТСР · ПЕПТИДЫ",
+      "file": "ptsd-peptides.png",
+      "format": "png",
+      "randomEnabled": false
+    },
+    {
+      "id": "graduation-2027",
+      "name": "ВЫПУСКНОЙ 2027",
+      "file": "graduation-2027.png",
+      "format": "png",
+      "randomEnabled": false
+    },
+    {
+      "id": "ptsd-perfume",
+      "name": "ПТСР · ПАРФЮМ",
+      "file": "ptsd-perfume.png",
+      "format": "png",
+      "randomEnabled": false
+    }
+  ]
+}
