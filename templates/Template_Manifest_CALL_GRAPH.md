@@ -12,6 +12,8 @@
 
 `templates/manifest.php::TemplateManifestCatalog::templateEntry <- templates/manifest.php::TemplateManifestCatalog::manifest`
 
+`templates/manifest.php::hash(file revision) <- templates/manifest.php::TemplateManifestCatalog::templateEntry [версия оригинала для кэша общего preview-сервиса]`
+
 `templates/manifest.php::TemplateManifestCatalog::derivedId <- templates/manifest.php::TemplateManifestCatalog::templateEntry`
 
 `templates/manifest.php::TemplateManifestCatalog::derivedName <- templates/manifest.php::TemplateManifestCatalog::templateEntry`

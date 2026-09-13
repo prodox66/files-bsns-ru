@@ -51,6 +51,11 @@ final class TemplateManifestCatalog
             if (!isset($availableFiles[$fileName])) {
                 continue;
             }
+            // Branch: a tracked compatibility file may stay on disk without becoming a duplicate gallery card.
+            if (($metadataEntry['hidden'] ?? false) === true) {
+                unset($availableFiles[$fileName]);
+                continue;
+            }
             $entriesByFile[$fileName] = $this->templateEntry($fileName, $metadataEntry, $availableFiles[$fileName]);
             unset($availableFiles[$fileName]);
         }
@@ -120,11 +125,15 @@ final class TemplateManifestCatalog
         $derivedId = $this->derivedId($fileName);
         $configuredId = trim((string) ($metadata['id'] ?? ''));
         $configuredName = trim((string) ($metadata['name'] ?? ''));
+        $filePath = (string) $this->config['directoryPath'] . DIRECTORY_SEPARATOR . $fileName;
+        $fileModifiedAt = (int) filemtime($filePath);
+        $fileSize = (int) filesize($filePath);
         return [
             'id' => $configuredId !== '' ? $configuredId : $derivedId,
             'name' => $configuredName !== '' ? $configuredName : $this->derivedName($derivedId),
             'file' => $fileName,
             'format' => $format,
+            'revision' => hash('sha256', $fileName . '|' . $fileModifiedAt . '|' . $fileSize),
             'randomEnabled' => (bool) ($metadata['randomEnabled'] ?? $this->config['defaultRandomEnabled']),
         ];
     }

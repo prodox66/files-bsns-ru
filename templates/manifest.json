@@ -4,23 +4,35 @@
     {
       "id": "ptsd-peptides",
       "name": "ПТСР · ПЕПТИДЫ",
-      "file": "ptsd-peptides.png",
+      "file": "bzn-project-with-images.png",
       "format": "png",
       "randomEnabled": false
     },
     {
       "id": "graduation-2027",
       "name": "ВЫПУСКНОЙ 2027",
-      "file": "graduation-2027.png",
+      "file": "bzn-project-with-images2.png",
       "format": "png",
       "randomEnabled": false
     },
     {
       "id": "ptsd-perfume",
       "name": "ПТСР · ПАРФЮМ",
-      "file": "ptsd-perfume.png",
+      "file": "bzn-project-with-images3.png",
       "format": "png",
       "randomEnabled": false
+    },
+    {
+      "file": "ptsd-peptides.png",
+      "hidden": true
+    },
+    {
+      "file": "graduation-2027.png",
+      "hidden": true
+    },
+    {
+      "file": "ptsd-perfume.png",
+      "hidden": true
     }
   ]
 }
