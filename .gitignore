@@ -1,5 +1,6 @@
 # Runtime template images are stored on the file server and must not enlarge Git history.
 /templates/*.png
+/templates/resource-manifest.json
 
 # User files and the host-owned landing page remain outside this deployment repository.
 /users/
