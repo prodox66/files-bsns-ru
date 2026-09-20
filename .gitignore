@@ -4,6 +4,3 @@
 # User files and the host-owned landing page remain outside this deployment repository.
 /users/
 /index.html
-
-# Server-to-server authorization stays only on the target host.
-/resource-api.local.php
