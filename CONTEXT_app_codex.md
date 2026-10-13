@@ -1,0 +1,3 @@
+# Portfolio task18, 13.10.2026
+
+Owned worktree for one cross-repository task: strict relational WP numeric IDs, private file-service WebP/prototype storage and static public routes. See `[SPRINTS]/26-10-13-23-14.md` for the complete pending queue, related tasks16/17 and proof labels. No user acceptance has been received. Other dirty editor/core work remains in the original checkouts. Every cross-site call introduced here is HTTPS with domain/authorization configuration only. Binary upload/read terminates on the file API. Production receipts follow after checkpoint; never infer publication or acceptance from this file alone.

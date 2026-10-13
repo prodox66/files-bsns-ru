@@ -1,0 +1,10 @@
+# Virtual public routes are independent of WP and hosting filesystem layout.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^users/[a-f0-9]{64}/(?:portfolio|prototype)(?:/|$) - [F,L]
+RewriteRule ^prototype/[a-f0-9]{64}/?$ portfolio/index.html [L]
+RewriteRule ^[a-z0-9][a-z0-9_-]{2,59}/portfolio/?$ portfolio/index.html [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^[a-z0-9][a-z0-9_-]{2,59}/?$ portfolio/index.html [L]
+</IfModule>
