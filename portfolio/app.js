@@ -7,6 +7,8 @@
         // Method: route aliases and hash access remain separate from numeric database relationships.
         request() {
             const parts = location.pathname.split('/').filter(Boolean);
+            // Branch: canonical user-container routes and previously shared root aliases resolve the same public profile.
+            if (parts[this.settings.zero] === this.settings.usersLeaf) parts.shift();
             const url = new URL(this.settings.metadataRoute, this.settings.metadataDomain);
             if (parts[this.settings.zero] === 'prototype') { url.searchParams.set('action', 'prototype'); url.searchParams.set('hash', parts[this.settings.one] || ''); }
             else { url.searchParams.set('username', parts[this.settings.zero] || ''); url.searchParams.set('action', parts[this.settings.one] === 'portfolio' ? 'portfolio' : 'profile'); url.searchParams.set('offset', String(this.offset)); }
