@@ -5,3 +5,9 @@
 # User files and the host-owned landing page remain outside this deployment repository.
 /users/
 /index.html
+
+# Host-owned public library aliases and generated user landing pages stay outside Git.
+/templates
+/styles
+/user-*
+/prototype/
